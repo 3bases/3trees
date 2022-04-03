@@ -4,7 +4,7 @@ import { imageCDNHost } from './config'
 // more recent versions of notion don't proxy unsplash images
 const EXPCEPTION = 'https://images.unsplash.com'
 
-export const mapNotionImageUrl = (url: string, block: Block) => {
+export const mapNotionImageUrl = (url: string, block: Block): string  => {
   if (url.startsWith('data:')) return url
   if (imageCDNHost && url.startsWith(imageCDNHost)) return url
   if (url.startsWith('/images')) url = `https://www.notion.so${url}`
@@ -22,7 +22,7 @@ export const mapNotionImageUrl = (url: string, block: Block) => {
   return mapImageUrl(url)
 }
 
-export const mapImageUrl = (imageUrl: string) => {
+export const mapImageUrl = (imageUrl: string): string  => {
   if (imageUrl.startsWith('data:')) return imageUrl
   if (imageCDNHost) return `${imageCDNHost}/${encodeURIComponent(imageUrl)}`
   else return imageUrl
