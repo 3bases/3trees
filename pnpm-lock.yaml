@@ -41,7 +41,7 @@ specifiers:
   next-transpile-modules: ^8.0.0
   notion-client: 4.19.8
   notion-types: 4.19.8
-  notion-utils: 4.19.8
+  notion-utils: 6.12.9
   npm-run-all: ^4.1.5
   nprogress: ^0.2.0
   p-map: ^4.0.0
@@ -89,7 +89,7 @@ dependencies:
   next-transpile-modules: 8.0.0
   notion-client: 4.19.8
   notion-types: 4.19.8
-  notion-utils: 4.19.8
+  notion-utils: 6.12.9
   npm-run-all: 4.1.5
   nprogress: 0.2.0
   p-map: 4.0.0
@@ -4607,6 +4607,11 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
+  /is-url-superb/6.1.0:
+    resolution: {integrity: sha512-LXdhGlYqUPdvEyIhWPEEwYYK3yrUiPcBjmFGlZNv1u5GtIL5qQRf7ddDyPNAvsMFqdzS923FROpTQU97tLe3JQ==}
+    engines: {node: '>=12'}
+    dev: false
+
   /is-utf8/0.2.1:
     resolution: {integrity: sha1-Sw2hRCEE0bM2NA6AeX6GXPOffXI=}
     dev: false
@@ -5102,6 +5107,14 @@ packages:
     resolution: {integrity: sha512-UdiUWfvz9fZMg1pzf4dcuqA0W079o0mpqbTnOz5ip4VGYX96QjmbM+OgOU/0uOzAytxC0Ny4z+VcYQnhdifimg==}
     dev: false
 
+  /mem/9.0.2:
+    resolution: {integrity: sha512-F2t4YIv9XQUBHt6AOJ0y7lSmP1+cY7Fm1DRh9GClTGzKST7UWLMx6ly9WZdLH/G/ppM5RL4MlQfRT71ri9t19A==}
+    engines: {node: '>=12.20'}
+    dependencies:
+      map-age-cleaner: 0.1.3
+      mimic-fn: 4.0.0
+    dev: false
+
   /memorystream/0.3.1:
     resolution: {integrity: sha1-htcJCzDORV1j+64S3aUaR93K+bI=}
     engines: {node: '>= 0.10.0'}
@@ -5174,6 +5187,11 @@ packages:
   /mimic-fn/3.1.0:
     resolution: {integrity: sha512-Ysbi9uYW9hFyfrThdDEQuykN4Ey6BuwPD2kpI5ES/nFTDn/98yxYNLZJcgUAKPT/mcrLLKaGzJR9YVxJrIdASQ==}
     engines: {node: '>=8'}
+    dev: false
+
+  /mimic-fn/4.0.0:
+    resolution: {integrity: sha512-vqiC06CuhBTUdZH+RYl8sFrL096vA45Ok5ISO6sE/Mr1jRbGH4Csnhi8f3wKVl7x8mO4Au7Ir9D3Oyv1VYMFJw==}
+    engines: {node: '>=12'}
     dev: false
 
   /mimic-response/1.0.1:
@@ -5410,6 +5428,11 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
+  /normalize-url/7.0.3:
+    resolution: {integrity: sha512-RiCOdwdPnzvwcBFJE4iI1ss3dMVRIrEzFpn8ftje6iBfzBInqlnRrNhxcLwBEKjPPXQKzm1Ptlxtaiv9wdcj5w==}
+    engines: {node: '>=12.20'}
+    dev: false
+
   /notion-client/4.19.8:
     resolution: {integrity: sha512-be9hMYILCKH8kQIUhNJKTBj5VWKufRvnMIRcP1Rj2nxdXW6w0vyTeL6akqYrdMoIJq1wxL3eFFwhB7Ji7b0cdQ==}
     engines: {node: '>=12'}
@@ -5425,12 +5448,28 @@ packages:
     engines: {node: '>=12'}
     dev: false
 
+  /notion-types/6.12.6:
+    resolution: {integrity: sha512-UBbhnzKgn48SVTkMP5It3heODrf8gAPb6O5vLna9pi9zdAtfSjmGmn5//C0P1rF/ppX7cCfgX964g+8VLUBOag==}
+    engines: {node: '>=12'}
+    dev: false
+
   /notion-utils/4.19.8:
     resolution: {integrity: sha512-d85bSrfr58/vReesEALiZcDcczRa/iiBZagmoNFjLX87ooMeJoPs9CLwGuCg0inhDFFqAU8c4PJgAc7/FNOM/A==}
     engines: {node: '>=12'}
     dependencies:
       notion-types: 4.19.8
       p-queue: 6.6.2
+    dev: false
+
+  /notion-utils/6.12.9:
+    resolution: {integrity: sha512-VSVBfaQ5hDtDwLsOMyp16etp2jNslyXTCmoQ5T8YBCGh4wpRAYsVsuaO+QUG5lrbAK32hE6N6HF2rUr/Qa1dyQ==}
+    engines: {node: '>=12'}
+    dependencies:
+      is-url-superb: 6.1.0
+      mem: 9.0.2
+      normalize-url: 7.0.3
+      notion-types: 6.12.6
+      p-queue: 7.2.0
     dev: false
 
   /npm-run-all/4.1.5:
